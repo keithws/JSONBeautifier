@@ -1,6 +1,8 @@
 # JSONBeautifier
 Code to beautify (or pretty-print) JSON responses in the browser.
 
+[[https://github.com/keithws/JSONBeautifier/blob/master/screenshot.png|alt=screenshot]]
+
 I created this because [JSON Formatter for Safari](https://github.com/rfletcher/safari-json-formatter) stopped working in Safari 12. There are a few new options for Safari 12, but I didn't find an open source one in the App Store, and I do not trust closed source browser extensions.
 
 This can be used as a bookmarklet or the source, `json-beautifier.js`, can be copied and pasted into the browser console.
