@@ -18,6 +18,6 @@
 	script = document.createElement("script");
 	script.src = url + "?d=" + today;
 
-	document.body.appendChild(script);
+	document.head.appendChild(script);
 
 })();

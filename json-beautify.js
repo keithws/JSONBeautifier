@@ -76,7 +76,7 @@
 	script.src = cdn + "/components/prism-json.min.js";
 	script.async = false;
 	fragment.appendChild(script);
-	document.body.appendChild(fragment);
+	document.head.appendChild(fragment);
 
 	// create global object with properties to provide access
 	// to the original text and the parsed value
