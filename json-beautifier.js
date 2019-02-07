@@ -43,40 +43,47 @@
 	// append new child node
 	document.body.appendChild(pre);
 
-	// inject prsim.js scripts and styles for syntax highlighting
-	cdn = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0";
+	if (theme !== undefined && theme !== null) {
 
-	// inject base css
-	link = document.createElement("link");
-	link.href = cdn + "/themes/prism.min.css";
-	link.rel = "stylesheet";
-	document.head.appendChild(link);
+		// inject prsim.js scripts and styles for syntax highlighting
+		cdn = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0";
 
-	if (theme) {
-
-		// inject theme css
+		// inject base css
 		link = document.createElement("link");
-		link.href = cdn + "/themes/prism-" + theme + ".min.css";
+		link.href = cdn + "/themes/prism.min.css";
 		link.rel = "stylesheet";
 		document.head.appendChild(link);
 
+		if (theme !== "") {
+
+			// inject theme css
+			link = document.createElement("link");
+			link.href = cdn + "/themes/prism-" + theme + ".min.css";
+			link.rel = "stylesheet";
+			document.head.appendChild(link);
+
+		}
+
+		// use a fragment to inject both script tags at the same time
+		fragment = document.createDocumentFragment();
+
+		// inject prism.js main script
+		script = document.createElement("script");
+		script.src = cdn + "/prism.min.js";
+		script.async = false;
+		fragment.appendChild(script);
+
+		// inject prism.js JSON language defination
+		script = document.createElement("script");
+		script.src = cdn + "/components/prism-json.min.js";
+		script.async = false;
+		fragment.appendChild(script);
+		document.head.appendChild(fragment);
+
+		// restore the expected font size
+		pre.style.fontSize = "81.25%";
+
 	}
-
-	// use fragment to inject both script tags at the same time
-	fragment = document.createDocumentFragment();
-
-	// inject prism.js main script
-	script = document.createElement("script");
-	script.src = cdn + "/prism.min.js";
-	script.async = false;
-	fragment.appendChild(script);
-
-	// inject prism.js JSON language defination
-	script = document.createElement("script");
-	script.src = cdn + "/components/prism-json.min.js";
-	script.async = false;
-	fragment.appendChild(script);
-	document.head.appendChild(fragment);
 
 	// create global object with properties to provide access
 	// to the original text and the parsed value
