@@ -6,7 +6,7 @@ I created this because [JSON Formatter for Safari](https://github.com/rfletcher/
 This can be used as a bookmarklet or the source, `json-beautifier.js` can be copied and pasted into the browser console.
 
 ```
-javascript:javascript:!function(){var%20e,t,i,a;window.JSONBeautifier={space:%22\t%22,theme:%22coy%22},a=%22https://keithws.github.io/JSONBeautifier/json-beautifier.js%22,e=Date.now(),i=e-e%2524*60*60*1e3,t=document.createElement(%22script%22),t.src=a+%22%3Fd=%22+i,document.head.appendChild(t)}();
+javascript:!function(){var%20e,t,i,a;window.JSONBeautifier={space:%22\t%22,theme:%22coy%22},a=%22https://keithws.github.io/JSONBeautifier/json-beautifier.js%22,e=Date.now(),i=e-e%2524*60*60*1e3,t=document.createElement(%22script%22),t.src=a+%22%3Fd=%22+i,document.head.appendChild(t)}();
 ```
 
 Note, you can change the indentation (spaces or tabs) and the theme (from prism.js) in the global object defined in the first part of the bookmarklet.
