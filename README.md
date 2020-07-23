@@ -9,14 +9,14 @@ Bookmarklet (code) to beautify (or pretty-print) JSON responses in the browser.
 
 Right-click on the following link and select "Add Link to Bookmarks…"
 
-[JSON Beautifier](javascript:!function(){var%20e,t,i,a;window.JSONBeautifier={space:%22\t%22,theme:%22coy%22},a=%22https://keithws.github.io/JSONBeautifier/json-beautifier.js%22,e=Date.now(),i=e-e%2524*60*60*1e3,t=document.createElement(%22script%22),t.src=a+%22%3Fd=%22+i,document.head.appendChild(t)}();)
+[JSON Beautifier][1]
 
 ### Option 2
 
-1.  Open Bookmark Manager `⌥⌘B`
+1.  Open Bookmark Manager
 1.  Add New Bookmark
 1.  Name it "JSON Beautifier"
-1.  Copy and paste the following line of code for the URL
+1.  Copy and paste the following line of code to the URL field
 
 ```
 javascript:!function(){var%20e,t,i,a;window.JSONBeautifier={space:%22\t%22,theme:%22coy%22},a=%22https://keithws.github.io/JSONBeautifier/json-beautifier.js%22,e=Date.now(),i=e-e%2524*60*60*1e3,t=document.createElement(%22script%22),t.src=a+%22%3Fd=%22+i,document.head.appendChild(t)}();
@@ -31,3 +31,5 @@ This can be used as a bookmarklet or the source, `json-beautifier.js`, can be co
 Note, you can change the indentation (spaces or tabs) and the theme (from prism.js) in the global object defined in the first part of the bookmarklet.
 
 Bookmarketlet made from `json-beautifier-bootstrap.js` with [Bookmarkleter](http://chriszarate.github.io/bookmarkleter/).
+
+[1]:javascript:!function(){var%20e,t,i,a;window.JSONBeautifier={space:%22\t%22,theme:%22coy%22},a=%22https://keithws.github.io/JSONBeautifier/json-beautifier.js%22,e=Date.now(),i=e-e%2524*60*60*1e3,t=document.createElement(%22script%22),t.src=a+%22%3Fd=%22+i,document.head.appendChild(t)}();
